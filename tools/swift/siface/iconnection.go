@@ -20,7 +20,13 @@ type IConnection interface {
 	// 获取远程客户端的 TCP状态  IP PORT
 	RemoteAddr() net.Addr
 	// 发送数据, 将数据发送给客户端
-	Send(data []byte) error
+	SendMsg(uint32, []byte) error
+	// 设置链接属性
+	SetProperty(key string, value interface{})
+	// 获取链接属性
+	GetProperty(key string) (interface{}, error)
+	// 移除链接属性
+	RemoveProperty(key string)
 }
 
 // 定义个处理链接的业务的方法

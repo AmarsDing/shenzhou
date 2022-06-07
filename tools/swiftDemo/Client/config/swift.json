@@ -1,0 +1,7 @@
+{
+  "Name": "swift V0.0.5",
+  "Host": "0.0.0.0",
+  "TcpPort": 9001,
+  "MaxConn": 30,
+  "MaxPackageSize": 1024
+}
